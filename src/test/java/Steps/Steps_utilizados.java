@@ -37,21 +37,21 @@ public class Steps_utilizados {
 		public void o_usuário_deverá_estar_logado_no_sistema_com_status(String status) throws InterruptedException {
 		   metodo.pausar(3000);
 
-		   metodo.pausar(3000); // Pequena pausa para garantir que a página carregou
+		   metodo.pausar(3000);  
 
 		    // Obtém a URL atual do navegador
 		    String urlAtual = metodo.getDriver().getCurrentUrl();
 		    boolean loginEfetuado = urlAtual.contains("inventory.html");
 
-		    // Define o status esperado com base no cenário
+		    
 		    String esperado = status.equals("sucesso") ? "sucesso" : "falha";
 		    String obtido = loginEfetuado ? "sucesso" : "falha";
 
-		    // Exibe informações no console para debugging
+		    
 		    System.out.println("Esperado: " + esperado);
 		    System.out.println("Obtido: " + obtido);
 
-		    // Validação do login
+		    
 		    Assert.assertEquals("O status do login não é o esperado!", esperado, obtido);
 		    metodo.fecharNavegador();
 		}
@@ -66,17 +66,16 @@ public void eu_insiro_o_usuário_e_a_senha_inválidos(String string, String stri
 @Então("o sistema deve exibir a mensagem de erro {string}")
 public void o_sistema_deve_exibir_a_mensagem_de_erro(String mensagemEsperada) {
     metodo.aguardarElementoVisivel(elemento.getMensagemErro());
-    metodo.aguardarElementoVisivel(By.className("error-message-container")); // Aguarda o erro aparecer
+    metodo.aguardarElementoVisivel(By.className("error-message-container")); 
 
-    // Obtém o texto da mensagem de erro na tela
+    
     WebElement mensagemErro = metodo.getDriver().findElement(By.className("error-message-container"));
     String mensagemObtida = mensagemErro.getText();
 
-    // Exibe as mensagens no console para debugging
     System.out.println("Mensagem Esperada: " + mensagemEsperada);
     System.out.println("Mensagem Obtida: " + mensagemObtida);
 
-    // Validação da mensagem
+   
     Assert.assertEquals("A mensagem de erro não está correta!", mensagemEsperada, mensagemObtida);
     metodo.fecharNavegador();
 }
