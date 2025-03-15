@@ -9,7 +9,7 @@ public class Elementos_de_Tela {
     private By btnLogin = By.xpath("//*[@id=\"login-button\"]");
     private By mensagemErro = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3");
 
-    // Métodos Getters
+    
     public By getCampoNome() {
         return campoNome;
     }
