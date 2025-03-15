@@ -35,11 +35,9 @@ public class Steps_utilizados {
 
 		@Então("o usuário deverá estar logado no sistema com status {string}")
 		public void o_usuário_deverá_estar_logado_no_sistema_com_status(String status) throws InterruptedException {
-		   metodo.pausar(3000);
+		   metodo.pausar(3000); 
 
-		   metodo.pausar(3000);  
-
-		    // Obtém a URL atual do navegador
+		    
 		    String urlAtual = metodo.getDriver().getCurrentUrl();
 		    boolean loginEfetuado = urlAtual.contains("inventory.html");
 
