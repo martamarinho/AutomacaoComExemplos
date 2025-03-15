@@ -23,7 +23,7 @@ public class Steps_utilizados {
 	@Quando("eu insiro o usuário {string} e a senha {string} válidos")
 	public void eu_insiro_o_usuário_e_a_senha_válidos(String string, String string2) {
 	    metodo.preencher(elemento.getCampoNome(), string );
-	    //metodo.preencher(elemento.getCampoSenha(), string2 );
+	    metodo.preencher(elemento.getCampoSenha(), string2 );
 	}
 
 	@Quando("clicar em login")
