@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import Elementos.Elementos_de_Tela;
-import Metodos.Metodos_de_uso;
+import Metodos.Metodos_deuso;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.it.Quando;
 import io.cucumber.java.pt.Então;
 
 public class Steps_utilizados {
 	
-	Metodos_de_uso metodo = new Metodos_de_uso();
+	Metodos_deuso metodo = new Metodos_deuso();
 	Elementos_de_Tela elemento = new Elementos_de_Tela();
 
 
